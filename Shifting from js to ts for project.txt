@@ -1,0 +1,19 @@
+Why move from JavaScript to TypeScript?
+
+The core reason for adopting TypeScript is to introduce static typing to your JavaScript code. 
+- While JavaScript is a dynamically typed language (meaning you can change a variable's type at any time), 
+- TypeScript is a "superset" of JavaScript that adds optional static types.
+- Catch Bugs Early (Static Type Checking)
+- Improved Code Quality and Readability
+- Easier Maintenance for Large Projects
+
+How to Add TypeScript to a Node.js Backend ?
+
+- pnpm add -D typescript @types/node
+- pnpm add -D @types/express
+- npx tsc --init
+- "scripts": {
+  "build": "tsc",
+  "start": "node dist/index.js",
+  "dev": "nodemon src/index.ts"
+}
