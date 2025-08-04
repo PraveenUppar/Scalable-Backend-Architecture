@@ -12,6 +12,10 @@ How to Add TypeScript to a Node.js Backend ?
 - pnpm add -D typescript @types/node
 - pnpm add -D @types/express
 - npx tsc --init
+- Make changes in tsconfig.json file
+    - "rootDir":"./src" (uncomment it from the file)
+    - "outDir": "./dist" (uncomment it from the file)
+- create a src folder and move alll the folders in it exceptr nodemodules and packages
 - "scripts": {
   "build": "tsc",
   "start": "node dist/index.js",
