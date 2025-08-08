@@ -9,9 +9,12 @@ The core reason for adopting TypeScript is to introduce static typing to your Ja
 
 How to Add TypeScript to a Node.js Backend ?
 
+- server.js to server.ts (convert all files to .ts)
 - pnpm add -D typescript @types/node
 - pnpm add -D @types/express
+- pnpm i typescript
 - npx tsc --init
+  - tsconfig file will be created
 - Make changes in tsconfig.json file
     - "rootDir":"./src" (uncomment it from the file)
     - "outDir": "./dist" (uncomment it from the file)
