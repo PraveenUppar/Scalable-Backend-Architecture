@@ -1,25 +1,25 @@
-import express from "express"
+import express from "express";
 import {
   createTodo,
   getTodos,
   editTodo,
   deleteTodo,
-} from "../controllers/todoController"
-import apiKey from "../auth/apiKey"
-import permission from "../helpers/permission"
-import { Permission } from "../models/apiKeyModel"
-import authentication from "../auth/authentication"
-import role from "../helpers/role"
-import { RoleCode } from "../models/roleModel"
-import authorization from "../auth/authorization"
+} from "../controllers/todoController";
+import apiKey from "../auth/apiKey";
+import permission from "../helpers/permission";
+import { Permission } from "../models/ApiKeyModel";
+import authentication from "../auth/authentication";
+import role from "../helpers/role";
+import { RoleCode } from "../models/roleModel";
+import authorization from "../auth/authorization";
 
-const router = express.Router()
+const router = express.Router();
 
-router.use(apiKey)
+router.use(apiKey);
 
-router.use(permission(Permission.GENERAL))
+router.use(permission(Permission.GENERAL));
 
-router.use(authentication)
+router.use(authentication);
 
 /**
  * @swagger
@@ -76,7 +76,7 @@ router.use(authentication)
  *       400:
  *         description: Invalid input data
  */
-router.route("/").post(role(RoleCode.USER), authorization, createTodo)
+router.route("/").post(role(RoleCode.USER), authorization, createTodo);
 
 /**
  * @swagger
@@ -100,7 +100,7 @@ router.route("/").post(role(RoleCode.USER), authorization, createTodo)
  *       401:
  *         description: Not authenticated
  */
-router.route("/").get(role(RoleCode.USER), authorization, getTodos)
+router.route("/").get(role(RoleCode.USER), authorization, getTodos);
 
 /**
  * @swagger
@@ -133,7 +133,7 @@ router.route("/").get(role(RoleCode.USER), authorization, getTodos)
  *       404:
  *         description: Todo not found
  */
-router.route("/:id").put(editTodo)
+router.route("/:id").put(editTodo);
 
 /**
  * @swagger
@@ -160,7 +160,7 @@ router.route("/:id").put(editTodo)
  *       404:
  *         description: Todo not found
  */
-router.route("/:id").delete(deleteTodo)
+router.route("/:id").delete(deleteTodo);
 
 /**
  * @swagger
@@ -198,6 +198,6 @@ router.route("/:id").delete(deleteTodo)
  *       404:
  *         description: Todo not found
  */
-router.route("/:id/status").put(editTodo)
+router.route("/:id/status").put(editTodo);
 
-export default router
+export default router;

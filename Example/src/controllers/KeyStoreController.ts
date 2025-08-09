@@ -1,5 +1,5 @@
-import { KeyStoreModel } from "../models/keyStoreModel"
-import { UserDoc } from "../models/userModel"
+import { KeyStoreModel } from "../models/KeyStoreModel";
+import { UserDoc } from "../models/userModel";
 
 async function create(
   client: UserDoc,
@@ -10,8 +10,8 @@ async function create(
     client,
     primaryKey,
     secondaryKey,
-  })
-  return keys
+  });
+  return keys;
 }
 
-export { create }
+export { create };

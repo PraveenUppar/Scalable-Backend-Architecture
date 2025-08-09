@@ -1,7 +1,7 @@
-import ApiKey, { ApiKeyModel } from "../models/apiKeyModel"
+import ApiKey, { ApiKeyModel } from "../models/ApiKeyModel";
 
 async function findByKey(key: string): Promise<ApiKey | null> {
-  return ApiKeyModel.findOne({ key, status: true })
+  return ApiKeyModel.findOne({ key, status: true });
 }
 
-export { findByKey }
+export { findByKey };
