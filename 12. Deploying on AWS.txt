@@ -1,0 +1,21 @@
+AWS 
+
+1. AWS EC2
+
+- Create a EC2 instance and run the server
+- Scalablity issue
+- Dependies issue
+
+2. AWS ECR and ECS
+
+- Create a repo in ECR
+- Push the image to ECR 
+- Create a cluster
+- Craete a new task
+- Create a service
+- URL is created 
+
+
+3. AWS Lamda
+
+- Serverless

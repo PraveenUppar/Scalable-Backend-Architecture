@@ -1,5 +1,7 @@
 Docker 
 
+// Without Docker Compose
+
 // Backend image and running backend image in container
 - docker build -t backend .
 - docker images ls
@@ -8,7 +10,7 @@ Docker
 // Run a mongoose container with its image
 - docker run --name mongo_db -p 27107:27107 -d mongo
 
-// Run a mongoose container with its image
+// Run a Redis container with its image
 - docker run --name redis_db -p 6379:6379 -d redis
 - docker exec -it redis bash
 - redis-cli
@@ -17,7 +19,9 @@ Docker
 
 // Docker Network
 - docker network create todo-network
-- docker network connect todo-network mongo 
+- docker network ls
+- docker network connect todo-network mongo_db 
+- docker network connect todo-network redis_db 
 - docker network inspect todo-network
 - docker build -t backend .
 - docker run --name todo-app -p 8080:8080 --network todo-network backend
@@ -31,3 +35,6 @@ Docker
 
 // Pushing docker image to dockerhub
 - docker build -t praveen/todo-app:latest
+
+// With DockeR Compose
+- docker compose up --build

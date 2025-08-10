@@ -1,8 +1,0 @@
-AWS EC2
-
-- Create a EC2 instance 
-- Push the image to the AWS Container Registry - ECR
-- AWS ECS
-- Create a cluster and task
-
-
