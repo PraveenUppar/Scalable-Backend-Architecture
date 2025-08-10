@@ -15,7 +15,15 @@ AWS
 - Create a service
 - URL is created 
 
+3. AWS EKS
 
-3. AWS Lamda
+- AWS config
+- install eksctl
+- eksctl create cluster
+- Setup secrets
+- Run deployment
+- Run service
+
+4. AWS Lamda
 
 - Serverless
