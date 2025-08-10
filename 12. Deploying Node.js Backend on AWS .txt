@@ -1,0 +1,20 @@
+Kubernetes
+
+- minikube start --driver=docker --nodes=3 
+- kubectl get nodes
+- kubectl get pods
+- 
+- 
+- 
+- 
+
+
+
+
+
+
+
+
+
+
+

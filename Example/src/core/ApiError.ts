@@ -1,4 +1,4 @@
-import { Response } from "express"
+import { Response } from "express";
 
 export enum ErrorType {
   BAD_REQUEST = "BadRequest",
@@ -12,21 +12,21 @@ export enum ErrorType {
 }
 
 export class ApiError extends Error {
-  type: ErrorType
-  statusCode: number
+  type: ErrorType;
+  statusCode: number;
   constructor(type: ErrorType, statusCode: number, message: string) {
-    super(message)
-    this.type = type
-    this.statusCode = statusCode
-    Object.setPrototypeOf(this, new.target.prototype)
-    Error.captureStackTrace(this, this.constructor)
+    super(message);
+    this.type = type;
+    this.statusCode = statusCode;
+    Object.setPrototypeOf(this, new.target.prototype);
+    Error.captureStackTrace(this, this.constructor);
   }
 
   static handle(err: ApiError, res: Response) {
-    console.log(err.statusCode)
+    console.log(err.statusCode);
     res.status(err.statusCode || 500).json({
       type: err.type || ErrorType.INTERNAL,
       message: err.message || "Internal Server Error",
-    })
+    });
   }
 }
