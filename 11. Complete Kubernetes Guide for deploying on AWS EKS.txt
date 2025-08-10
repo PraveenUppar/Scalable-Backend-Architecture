@@ -1,0 +1,30 @@
+Kubernetes
+
+- minikube start --driver=docker --nodes=3 
+- kubectl get nodes
+- kubectl get pods
+- kubectl get pods -o wide
+- kubectl get pods --watch
+- kubectl create secret docker-registry dockerhub-secret --docker-username=praveen --docker-password=your_password --docker-email=praveenuppar718@gmail.com
+
+- kubectl apply -f deployment.yaml
+- kubectl apply -f service.yaml
+- kubectl get svc
+- minikube service todo-app-service
+
+
+- kubectl get deployments
+- kubectl logs pod_name
+
+// Create a cluster in EKS
+
+- Using aws cli
+
+
+
+
+
+
+
+
+

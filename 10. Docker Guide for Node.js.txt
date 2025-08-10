@@ -28,3 +28,6 @@ Docker
 
 // Bind Mounts
 - docker run --name todo-app -p 8080:8080 -v "$(pwd)":/app --network todo-network backend
+
+// Pushing docker image to dockerhub
+- docker build -t praveen/todo-app:latest
