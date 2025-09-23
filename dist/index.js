@@ -22,6 +22,8 @@ import authRoutes from "./routes/authRoutes.js";
 app.use("/api/auth", authRoutes);
 import todoRoutes from "./routes/todoRoutes.js";
 app.use("/api/todo", todoRoutes);
+import swagger from "./swagger/swagger.js";
+app.use("/api/docs", swagger);
 app.listen(port, () => {
     connectDB();
     console.log(`Todo Server running on port ${port}`);
