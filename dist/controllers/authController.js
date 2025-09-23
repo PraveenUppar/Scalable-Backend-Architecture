@@ -1,7 +1,12 @@
 import User from "../models/userModel.js";
 import generateToken from "../utils/generateToken.js";
+import { userLoginValidation, userRegisterValidation, } from "../api/validation.js";
 const registerUser = async (req, res) => {
     const { name, email, password } = req.body;
+    const data = userRegisterValidation.safeParse({ name, email, password });
+    if (!data.success) {
+        return res.status(400).json({ message: "Invalid User Data" });
+    }
     const userExists = await User.findOne({ email });
     if (userExists) {
         return res.status(400).json({ message: "User already Exists" });
@@ -22,6 +27,10 @@ const registerUser = async (req, res) => {
 };
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
+    const data = userLoginValidation.safeParse({ email, password });
+    if (!data.success) {
+        return res.status(400).json({ message: "Invalid User Data" });
+    }
     const user = await User.findOne({ email });
     if (!user) {
         return res.status(400).json({ message: "Invalid credentials" });

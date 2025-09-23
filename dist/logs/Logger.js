@@ -2,7 +2,7 @@ import { createLogger, transports, format } from "winston";
 import path from "path";
 import fs from "fs";
 import DailyRotateFile from "winston-daily-rotate-file";
-let dir = process.env.LOG_DIR || "log-history";
+let dir = "log-history";
 if (!dir)
     dir = path.resolve("logs");
 if (!fs.existsSync(dir)) {
