@@ -1,50 +1,13 @@
-Steps/Phases for projects
+Best practices for building a scalable backend architecture - ideal for engineering reliable, high-performance systems.
 
-1. Build the backend -- DONE
-2. Build the frontend -- DONE
-3. Connect both backend and frontend -- DONE
+Backend Todo's
 
-3.1 CI Pipeline
-    - Using Jenkins
-    - Using Github actions
-
-4. Docker
-
-- Docker File - Frontend and backend -- DONE
-    - create frontend and backend Docker File -- DONE
-    - build the docker file to images -- DONE
-    - Run the images in container with port mapping -- DONE
-
-- Docker compose 
-    - same as above but in a single file and command
-
-- Push the image to Docker Registery 
-    - Tag the image
-    - Push the image
-
-- Local Docker Deployment 
-
-
-5. Kubernnetes
-
-- Local Kubernnetes Cluster 
-
-- AWS EKS Cluster
-
-6. CICD
-- Simple EC2 insance Deployment 
-- Development Deployment with jenkins and docker
-- Production Deployment with Jenkins and AWS EKS
-
-7. TLS and Domain Name
-
-
-------------------------------------------------------------------------------------------------------------------------------------------
-
-Tech Stack 
-
-frontend = React + Tailwind CSS 
-backend  = Node + Express + Mongo 
-database - Mongo
-devops - aws + docker + Kubernnetes + cicd
-hosting - go daddy + aws
+1. PNPM Installation
+2. Typescript 
+3. Winston Logger
+4. Error Handling
+5. API with Zod
+6. Access and Refresh Token
+7. Unit testing
+8. Redis Caching
+9. API Documentation
