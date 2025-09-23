@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+import Logger from "./logs/Logger.js";
 dotenv.config();
 const app = express();
 const port = process.env.PORT;
@@ -24,5 +25,6 @@ app.use("/api/todo", todoRoutes);
 app.listen(port, () => {
     connectDB();
     console.log(`Todo Server running on port ${port}`);
+    Logger.info(`Todo Server running on port ${port}`);
 });
 //# sourceMappingURL=index.js.map
