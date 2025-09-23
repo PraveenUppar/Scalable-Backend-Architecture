@@ -1,6 +1,0 @@
-Unit and Integration Testing
-
-- Vitest - Testing and assertion lib
-- SuperTest - Testing api
-
-pnpm test
