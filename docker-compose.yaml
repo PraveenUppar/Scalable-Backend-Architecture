@@ -7,12 +7,3 @@ services:
     ports:
       - "3000:3000"
     restart: unless-stopped
-
-  frontend:
-    build: ./frontend
-    container_name: todo-frontend-container
-    ports:
-      - "5173:80"
-    restart: unless-stopped
-    depends_on:
-      - backend

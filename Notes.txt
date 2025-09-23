@@ -2,7 +2,7 @@ Best practices for building a scalable backend architecture - ideal for engineer
 
 Backend Todo's
 
-1. PNPM Installation
+1. PNPM Installation -- DONE
 2. Typescript 
 3. Winston Logger
 4. Error Handling
