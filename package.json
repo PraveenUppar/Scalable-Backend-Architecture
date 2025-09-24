@@ -1,12 +1,12 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/src/server.js",
+    "test": "cross-env NODE_ENV=test vitest --run"
   },
   "author": "Praveen",
   "license": "ISC",
@@ -34,8 +34,13 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^24.5.2",
+    "@types/supertest": "^6.0.3",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
-    "nodemon": "^3.0.1"
+    "cross-env": "^10.0.0",
+    "mongodb-memory-server": "^10.2.1",
+    "nodemon": "^3.0.1",
+    "supertest": "^7.1.4",
+    "vitest": "^3.2.4"
   }
 }
